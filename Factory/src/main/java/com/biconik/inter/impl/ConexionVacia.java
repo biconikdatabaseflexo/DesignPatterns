@@ -1,8 +1,8 @@
 package com.biconik.inter.impl;
 
-import com.biconik.inter.IConexion;
+import com.biconik.inter.IConexionBD;
 
-public class ConexionVacia implements IConexion{
+public class ConexionVacia implements IConexionBD{
 
 	public void conectar() {
 		System.out.println("NO SE ESPECIFICÓ PROVEEDOR");

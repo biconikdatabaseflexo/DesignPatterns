@@ -1,6 +1,8 @@
 package com.biconik;
 
-import com.biconik.inter.IConexion;
+import com.biconik.inter.FabricaAbstracta;
+import com.biconik.inter.IConexionBD;
+import com.biconik.inter.IConexionREST;
 import com.biconik.inter.impl.ConexionMySQL;
 import com.biconik.inter.impl.ConexionOracle;
 import com.biconik.inter.impl.ConexionPostgreSQL;
@@ -9,10 +11,10 @@ import com.biconik.inter.impl.ConexionVacia;
 
 
 //Aqui solicitará a la fabrica lo que RECIEN VA A FABRICAR
-public class ConexionFabrica {
+public class ConexionBDFabrica implements FabricaAbstracta{
 
 	//Aqui analiza la SOLICITUD A LA FABRICA
-	public IConexion getConexion(String motor) {
+	public IConexionBD getBD(String motor) {
 		if(motor==null) {
 			return new ConexionVacia();
 		}
@@ -24,8 +26,11 @@ public class ConexionFabrica {
 			return new ConexionPostgreSQL();
 		}else if(motor.equalsIgnoreCase("SQL")) {
 			return new ConexionSQLServer();
-		}
-		
+		}	
 		return new ConexionVacia();
 	}
+        
+        public IConexionREST getREST(String area){
+            return null;
+        }
 }
