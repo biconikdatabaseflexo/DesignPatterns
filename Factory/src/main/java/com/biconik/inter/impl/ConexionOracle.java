@@ -1,8 +1,8 @@
 package com.biconik.inter.impl;
 
-import com.biconik.inter.IConexion;
+import com.biconik.inter.IConexionBD;
 
-public class ConexionOracle implements IConexion{
+public class ConexionOracle implements IConexionBD{
 	
 	private String host;
 	private String puerto;

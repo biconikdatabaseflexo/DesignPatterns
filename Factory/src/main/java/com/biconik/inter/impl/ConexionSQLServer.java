@@ -1,8 +1,8 @@
 package com.biconik.inter.impl;
 
-import com.biconik.inter.IConexion;
+import com.biconik.inter.IConexionBD;
 
-public class ConexionSQLServer implements IConexion{
+public class ConexionSQLServer implements IConexionBD{
 
 	private String host;
 	private String puerto;

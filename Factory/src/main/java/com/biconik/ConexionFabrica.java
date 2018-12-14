@@ -1,18 +1,18 @@
 package com.biconik;
 
-import com.biconik.inter.IConexion;
 import com.biconik.inter.impl.ConexionMySQL;
 import com.biconik.inter.impl.ConexionOracle;
 import com.biconik.inter.impl.ConexionPostgreSQL;
 import com.biconik.inter.impl.ConexionSQLServer;
 import com.biconik.inter.impl.ConexionVacia;
+import com.biconik.inter.IConexionBD;
 
 
 //Aqui solicitará a la fabrica lo que RECIEN VA A FABRICAR
 public class ConexionFabrica {
 
 	//Aqui analiza la SOLICITUD A LA FABRICA
-	public IConexion getConexion(String motor) {
+	public IConexionBD getConexion(String motor) {
 		if(motor==null) {
 			return new ConexionVacia();
 		}

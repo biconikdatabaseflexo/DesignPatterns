@@ -1,6 +1,6 @@
 package com.biconik.inter;
 
-public interface IConexion {
+public interface IConexionBD {
 	
 	void conectar();
 	void desconectar();
